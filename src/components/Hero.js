@@ -1,7 +1,7 @@
-export const Hero = () => {
+export const Hero = ({title}) => {
     return (
         <header className="bg-dark text-white p-5">
-            <h1>Hero component</h1>
+            <h1>{title}</h1>
         </header>
     )
 }

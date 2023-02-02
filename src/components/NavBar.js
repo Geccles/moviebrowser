@@ -1,7 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-export const Navbar = () => {
+export const Navbar = ({ searchText, setSearchText }) => {
+    const updateSearchValue = (e) => {
+        setSearchText(e.target.value)
+    }
+
     return (
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
             <div className="container-fluid">
@@ -76,6 +80,8 @@ export const Navbar = () => {
                             type="search"
                             placeholder="Search"
                             aria-label="Search"
+                            value={searchText}
+                            onChange={updateSearchValue}
                         />
                         <button className="btn btn-outline-success" type="submit">
                             Search
