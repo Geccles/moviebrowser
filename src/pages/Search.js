@@ -1,7 +1,7 @@
 import { Hero } from "../components"
 
 export const Search = ({ searchText, searchResults }) => {
-    const title = `You are searching for ${searchResults}`
+    const title = `You are searching for ${searchText}`
     return (
         <>
             <Hero title={title} />
@@ -9,14 +9,15 @@ export const Search = ({ searchText, searchResults }) => {
                 <div className="row">
                     <div className="col-lg-8 offset-lg-2 my-5">
                         
-                        <ul>
-                            {/* {
+                       { searchResults && <ul>
+                            {
                                 searchResults.map(result => {
-                                    <li>{result}</li>
+                                    return <li>{result.name}</li>
                                 })
-                            } */}
+                            }
                             
                         </ul>
+}
                        
                     </div>
                 </div>

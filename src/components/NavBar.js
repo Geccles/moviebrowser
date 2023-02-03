@@ -1,8 +1,10 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 export const Navbar = ({ searchText, setSearchText }) => {
+    const navigate = useNavigate()
     const updateSearchValue = (e) => {
+        navigate('/search')
         setSearchText(e.target.value)
     }
 
