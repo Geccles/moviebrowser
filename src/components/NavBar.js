@@ -56,12 +56,18 @@ export const Navbar = ({ searchText, setSearchText }) => {
                             </Link>
                             <ul className="dropdown-menu">
                                 <li>
-                                    <a className="dropdown-item" href="gosomewhere">
+                                    <a
+                                        className="dropdown-item"
+                                        href="gosomewhere"
+                                    >
                                         Action
                                     </a>
                                 </li>
                                 <li>
-                                    <a className="dropdown-item" href="gosomewhere">
+                                    <a
+                                        className="dropdown-item"
+                                        href="gosomewhere"
+                                    >
                                         Another action
                                     </a>
                                 </li>
@@ -69,7 +75,10 @@ export const Navbar = ({ searchText, setSearchText }) => {
                                     <hr className="dropdown-divider" />
                                 </li>
                                 <li>
-                                    <a className="dropdown-item" href="gosomewhere">
+                                    <a
+                                        className="dropdown-item"
+                                        href="gosomewhere"
+                                    >
                                         Something else here
                                     </a>
                                 </li>
@@ -85,7 +94,10 @@ export const Navbar = ({ searchText, setSearchText }) => {
                             value={searchText}
                             onChange={updateSearchValue}
                         />
-                        <button className="btn btn-outline-success" type="submit">
+                        <button
+                            className="btn btn-outline-success"
+                            type="submit"
+                        >
                             Search
                         </button>
                     </form>
