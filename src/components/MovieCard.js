@@ -1,17 +1,23 @@
+import { getFormattedDate } from "../utils/getFormattedDate"
+
 export const MovieCard = ({ movie }) => {
-    const { name } = movie
+    const { original_title, poster_path, release_date, overview, id  } = movie
+    const imgUrl = `https://image.tmdb.org/t/p/w500/${poster_path}`
+    const formattedDated = getFormattedDate(release_date)
+
     return (
-        <div className="card" style={{ width: '18rem', marginBottom: 8 }}>
-            <img src="..." className="card-img-top" alt="..." />
-            <div className="card-body">
-                <h5 className="card-title">{name}</h5>
-                <p className="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                </p>
-                <a href="/go-some-where" className="btn btn-primary">
-                    Go somewhere
-                </a>
+        <div className="col-lg-3 col-md-4 col-2 my-4">
+            <div className="card">
+                <img src={imgUrl} className="card-img-top" alt={original_title} />
+                <div className="card-body">
+                    <h5 className="card-title">{original_title} - {formattedDated}</h5>
+                    <p className="card-text">
+                        {overview}
+                    </p>
+                    <a href={`/movie/${id}`} className="btn btn-primary">
+                        See more
+                    </a>
+                </div>
             </div>
         </div>
     )
