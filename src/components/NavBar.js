@@ -4,8 +4,8 @@ import { Link, useNavigate } from 'react-router-dom'
 export const Navbar = ({ searchText, setSearchText }) => {
     const navigate = useNavigate()
     const updateSearchValue = (e) => {
-        navigate('/search')
         setSearchText(e.target.value)
+        navigate('/search')
     }
 
     return (
@@ -85,7 +85,7 @@ export const Navbar = ({ searchText, setSearchText }) => {
                             </ul>
                         </li>
                     </ul>
-                    <form className="d-flex" role="search">
+                    <div className="d-flex" role="search">
                         <input
                             className="form-control me-2"
                             type="search"
@@ -94,13 +94,7 @@ export const Navbar = ({ searchText, setSearchText }) => {
                             value={searchText}
                             onChange={updateSearchValue}
                         />
-                        <button
-                            className="btn btn-outline-success"
-                            type="submit"
-                        >
-                            Search
-                        </button>
-                    </form>
+                    </div>
                 </div>
             </div>
         </nav>
