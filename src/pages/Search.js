@@ -10,11 +10,14 @@ export const Search = ({ searchText, searchResults }) => {
     return (
         <>
             <Hero title={title} />
-           {
-                searchResults && 
+           { 
                 <div className="container">
                     <div className="row">
-                        {getMovieResults}
+                        {
+                            searchResults ? getMovieResults 
+                            : <p>Sorry, we were unable to find the movie, try another movie.</p>
+                        
+                        }
                     </div>
                 </div>
            } 

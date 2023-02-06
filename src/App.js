@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import './App.css'
 import { Navbar } from './components'
-import { Home, About, Search, MovieDetail } from './pages'
+import { Home, About, Search, MovieDetail, PageNotFound } from './pages'
 import { API_KEY } from './Constants/keys'
 
 function App() {
@@ -37,6 +37,7 @@ function App() {
                     }
                 />
                 <Route path="/movie/:id" element={<MovieDetail />} />
+                <Route path="*" element={<PageNotFound />} />
             </Routes>
         </div>
     )
